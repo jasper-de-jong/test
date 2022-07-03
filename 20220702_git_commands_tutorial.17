@@ -1,0 +1,167 @@
+Microsoft Windows [Version 10.0.19044.1766]
+(c) Microsoft Corporation. All rights reserved.
+
+C:\Users\jaspe>cd C:\Users\jaspe\OneDrive\Desktop
+
+C:\Users\jaspe\OneDrive\Desktop>mkdir test_repo
+
+C:\Users\jaspe\OneDrive\Desktop>cd test_repo
+
+C:\Users\jaspe\OneDrive\Desktop\test_repo>git init
+Initialized empty Git repository in C:/Users/jaspe/OneDrive/Desktop/test_repo/.git/
+
+C:\Users\jaspe\OneDrive\Desktop\test_repo>git commit
+On branch master
+
+Initial commit
+
+nothing to commit (create/copy files and use "git add" to track)
+
+C:\Users\jaspe\OneDrive\Desktop\test_repo>git add Readme.md
+
+C:\Users\jaspe\OneDrive\Desktop\test_repo>git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   Readme.md
+
+
+C:\Users\jaspe\OneDrive\Desktop\test_repo>git commit -m "added Readme.me"
+[master (root-commit) c1aebf8] added Readme.me
+ 1 file changed, 1 insertion(+)
+ create mode 100644 Readme.md
+
+C:\Users\jaspe\OneDrive\Desktop\test_repo>git status
+On branch master
+nothing to commit, working tree clean
+
+C:\Users\jaspe\OneDrive\Desktop\test_repo>git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   Readme.md
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+C:\Users\jaspe\OneDrive\Desktop\test_repo>git add .
+
+C:\Users\jaspe\OneDrive\Desktop\test_repo>git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   Readme.md
+
+
+C:\Users\jaspe\OneDrive\Desktop\test_repo>git commit -m "changed Readme.md"
+[master 33aea65] changed Readme.md
+ 1 file changed, 3 insertions(+), 1 deletion(-)
+
+C:\Users\jaspe\OneDrive\Desktop\test_repo>git checkout -b new
+Switched to a new branch 'new'
+
+C:\Users\jaspe\OneDrive\Desktop\test_repo>git status
+On branch new
+nothing to commit, working tree clean
+
+C:\Users\jaspe\OneDrive\Desktop\test_repo>git status
+On branch new
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   Readme.md
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+C:\Users\jaspe\OneDrive\Desktop\test_repo>git add .
+
+C:\Users\jaspe\OneDrive\Desktop\test_repo>git commit -m "first commit to new branch"
+[new d8664eb] first commit to new branch
+ 1 file changed, 3 insertions(+), 1 deletion(-)
+
+C:\Users\jaspe\OneDrive\Desktop\test_repo>git checkout master
+Switched to branch 'master'
+
+C:\Users\jaspe\OneDrive\Desktop\test_repo>git checkout new
+Switched to branch 'new'
+
+C:\Users\jaspe\OneDrive\Desktop\test_repo>git status
+On branch new
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        git_test.r
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+C:\Users\jaspe\OneDrive\Desktop\test_repo>git checkout master
+Switched to branch 'master'
+
+C:\Users\jaspe\OneDrive\Desktop\test_repo>git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        git_test.r
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+C:\Users\jaspe\OneDrive\Desktop\test_repo>git add .
+
+C:\Users\jaspe\OneDrive\Desktop\test_repo>git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   git_test.r
+
+
+C:\Users\jaspe\OneDrive\Desktop\test_repo>git commit -m "added git_test.r"
+[master a305254] added git_test.r
+ 1 file changed, 3 insertions(+)
+ create mode 100644 git_test.r
+
+C:\Users\jaspe\OneDrive\Desktop\test_repo>git checkout new
+Switched to branch 'new'
+
+C:\Users\jaspe\OneDrive\Desktop\test_repo>git status
+On branch new
+nothing to commit, working tree clean
+
+C:\Users\jaspe\OneDrive\Desktop\test_repo>git checkout master
+Switched to branch 'master'
+
+C:\Users\jaspe\OneDrive\Desktop\test_repo>git checkout new
+Switched to branch 'new'
+
+C:\Users\jaspe\OneDrive\Desktop\test_repo>git merge master
+Merge made by the 'ort' strategy.
+ git_test.r | 3 +++
+ 1 file changed, 3 insertions(+)
+ create mode 100644 git_test.r
+
+C:\Users\jaspe\OneDrive\Desktop\test_repo>git chekout master
+git: 'chekout' is not a git command. See 'git --help'.
+
+The most similar command is
+        checkout
+
+C:\Users\jaspe\OneDrive\Desktop\test_repo>git checkout master
+Switched to branch 'master'
+
+C:\Users\jaspe\OneDrive\Desktop\test_repo>git checkout new
+Switched to branch 'new'
+
+C:\Users\jaspe\OneDrive\Desktop\test_repo>git checkout master
+Switched to branch 'master'
+
+C:\Users\jaspe\OneDrive\Desktop\test_repo>git merge new
+Updating a305254..efc77ec
+Fast-forward
+ Readme.md | 4 +++-
+ 1 file changed, 3 insertions(+), 1 deletion(-)
+
+C:\Users\jaspe\OneDrive\Desktop\test_repo>git checkout new
+Switched to branch 'new'
+
+C:\Users\jaspe\OneDrive\Desktop\test_repo>
